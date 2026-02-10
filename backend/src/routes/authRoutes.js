@@ -5,7 +5,7 @@ const {
   loginUser,
   getUserProfile,
 } = require('../controllers/authController');
-const { protect } = require('../middleware/authMiddleware');
+const { protect, admin } = require('../middleware/authMiddleware');
 const loginLimiter = require('../middleware/loginLimiter');
 
 router.post('/register', protect, admin, registerUser);
